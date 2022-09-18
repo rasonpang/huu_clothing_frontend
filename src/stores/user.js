@@ -6,11 +6,13 @@ const [data, setData] = createStore({
     age: 0
 });
 
-function setName(newName) {
-    setData({ name: data.name == 'Default' ? 'Not Default' : 'Default' });
-}
-
-export const user = data;
-export const setUser = {
-    name: setName
+const methods = {
+    name: (newName) => {
+        setData({ name: data.name == 'Default' ? 'Not Default' : 'Default' });
+    }
 };
+
+export {
+    data as user,
+    methods as setUser
+}
