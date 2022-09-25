@@ -323,6 +323,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@solidjs/router@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@solidjs/router/-/router-0.4.3.tgz#9996e423fd8aae27228f7ba98feb135c3af7e275"
+  integrity sha512-mYpd4HxpH/3UZjHGTr2dhvPGXu034Ktxd05CJGA6nRjRGYCgUfhCQHRdEivyqJyb4LhHyDht4ny5xmwEOkUTaQ==
+
 ansi-escapes@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-5.0.0.tgz#b6a0caf0eef0c41af190e9a749e0c00ec04bb2a6"
