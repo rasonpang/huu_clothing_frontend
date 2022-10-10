@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+
+    /* background-color: #2a2a2a; */
+    background-color: blueviolet;
+    color: white;
+}
+.toggleMenu {
+    display: inline-flex;
+}
+.toggleMenu > img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.panel {
+    display: inline-flex;
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, .75);
+    width: 100vw;
+    height: 100vh;
+    transition: .25s;
+}
+.panel > .content {
+    width: calc(90% - 2.5em);
+    height: 100%;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}

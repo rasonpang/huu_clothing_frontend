@@ -1,17 +1,17 @@
 import { lazy } from "solid-js";
 import { Routes, Route } from "@solidjs/router";
 
-const App = () => {
-    // Manual routes
-    const routeList = [
-        { path: "/", importPath: "index" },
-    ];
+import IndexPage from '@/pages/index';
 
-    // Automation routes
+const routeList = [
+    { path: "/", component: IndexPage },
+];
+
+const App = () => {
     const routeData = routeList.map(function(route) {
         return ({
             path: route.path,
-            component: lazy(() => import(`@/pages/${route.importPath}.jsx`))
+            component: route.component
         })
     })
 
