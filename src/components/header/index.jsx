@@ -12,7 +12,7 @@ const Header = () => {
         <>
             <div className={styles.container}>
                 <span className={styles.toggleMenu} onClick={toggleMenuStatus}>
-                    <img src='src/assets/menu.svg' />
+                    <img src='assets/menu.svg' />
                 </span>
                 <span>Asos {menuStatus() ? 'true' : 'false'}</span>
             </div>
@@ -20,7 +20,7 @@ const Header = () => {
             <div className={styles.panel} style={menuStatus() ? 'left: 0;' : ''}>
                 <span className={styles.content}>1</span>
                 <span className={styles.toggleMenu} onClick={toggleMenuStatus}>
-                    <img src='src/assets/menu.svg' />
+                    <img src='assets/menu.svg' />
                 </span>
             </div>
         </>
