@@ -1,4 +1,3 @@
-import { lazy } from "solid-js";
 import { Routes, Route } from "@solidjs/router";
 
 import IndexPage from '@/pages/index';

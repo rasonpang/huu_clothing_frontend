@@ -6,13 +6,6 @@
     background-color: blueviolet;
     color: white;
 }
-.toggleMenu {
-    display: inline-flex;
-}
-.toggleMenu > img {
-    width: 2.5em;
-    height: 2.5em;
-}
 
 .panel {
     display: inline-flex;
