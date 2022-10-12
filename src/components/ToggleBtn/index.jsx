@@ -1,12 +1,17 @@
 import styles from './style.module.css';
 
-import OnLogo from '@/assets/Menu.svg';
+import MenuLogo from '@/assets/Menu.svg';
 
 const ToggleBtn = (props) => {
 
+	const iconList = {
+		menu: MenuLogo,
+		cross: MenuLogo,
+	};
+
 	return (
 		<span className={styles.toggleMenu} onClick={props.onClick}>
-			<img src={OnLogo} />
+			<img src={iconList[props.icon]} />
 		</span>
 	);
 };
