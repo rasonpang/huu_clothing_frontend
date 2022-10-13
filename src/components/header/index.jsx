@@ -1,7 +1,7 @@
 // import { user, setUser } from '@/stores/user';
 import { setting, setSetting } from '@/stores/setting';
 import styles from './style.module.css';
-import { createSignal } from 'solid-js';
+import { createMemo, createSignal } from 'solid-js';
 
 import ToggleBtn from '@/components/ToggleBtn';
 import GenreSelector from './GenreSelector';
@@ -11,7 +11,7 @@ const Header = () => {
     const toggleMenuStatus = () => setMenuStatus(!menuStatus());
     
     const directionStyle = `direction: ${setting.handed == "left" ? "ltr" : "rtl"};`
-    // const panelStyle = ;
+    const panelStyle = createMemo(() => (`left: ${menuStatus() ? '0' : (setting.handed == 'left' ? '-' : '') + '100vw'};`));
 
     return (
         <>
@@ -32,17 +32,17 @@ const Header = () => {
             <div 
                 className={styles.panel} 
                 style={
-                    (`left: ${menuStatus() ? '0' : (setting.handed == 'left' ? '-' : '') + '100vw'};`) +
+                    panelStyle() +
                     directionStyle
                 }
             >
                 <div className={styles.content}>
                     <GenreSelector />
                 </div>
-                <div>
+                <div onClick={toggleMenuStatus}>
                     <ToggleBtn
                         icon="cross"
-                        onClick={toggleMenuStatus}
+                        onClick={() => {}}
                     />
                 </div>
             </div>

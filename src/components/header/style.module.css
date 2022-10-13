@@ -24,8 +24,6 @@
 }
 .panel > .content {
     width: calc(90% - 2.5em);
-    min-width: 295px;
-    max-width: 400px;
     height: 100%;
     background-color: rgb(26, 26, 26);
     color: white;
