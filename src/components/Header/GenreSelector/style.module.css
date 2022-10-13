@@ -3,9 +3,23 @@
 }
 
 .main_selector {
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	grid-auto-flow: column;
 	width: 100%;
-	padding: .75em 0;
 	background-color: red;
+}
+
+.main_selector > div {
+	text-align: center;
+	padding: .75em 0;
+}
+
+.sub_selector {
+	display: grid;
+	gap: 1em;
+	padding: 1em;
+}
+.sub_selector > div {
+	padding: 1.5em 1em;
+	background-color: rgba(255,255,255,0.75);
 }

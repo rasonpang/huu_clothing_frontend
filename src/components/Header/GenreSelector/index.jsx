@@ -29,12 +29,12 @@ const GenreSelector = () => {
 		<div className={styles.container}>
 			<div className={styles.main_selector}>
 				{genreList.map((genre, genreIndex) => (
-					<span onClick={() => setSelectedGenre(genreIndex)}>
+					<div onClick={() => setSelectedGenre(genreIndex)}>
 						{genre.title + (selectedGenre() == genreIndex ? '*' : '')}
-					</span>
+					</div>
 				))}
 			</div>
-			<div>
+			<div className={styles.sub_selector}>
 				{/* Scrollables */}
 				{selectedSubGenres().map((subGenre) => (
 					<div>{subGenre.title}</div>
