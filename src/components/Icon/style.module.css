@@ -1,0 +1,7 @@
+.toggleMenu {
+    display: inline-flex;
+}
+.toggleMenu > img {
+    width: 2.5em;
+    height: 2.5em;
+}

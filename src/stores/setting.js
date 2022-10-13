@@ -7,8 +7,10 @@ const [data, setData] = createStore({
 
 // Function
 const methods = {
-    setHanded(position) {
-        setData({ handed: position });
+    setHanded() {
+        const newHanded = data.handed == 'left' ? 'right' : 'left';
+        console.log('newHanded', newHanded);
+        setData({ handed: newHanded });
     }
 };
 

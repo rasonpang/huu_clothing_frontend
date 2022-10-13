@@ -28,3 +28,8 @@
     background-color: rgb(26, 26, 26);
     color: white;
 }
+
+.settings {
+    direction: ltr;
+    padding: 1em;
+}

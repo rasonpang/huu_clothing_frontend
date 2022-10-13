@@ -3,22 +3,26 @@ import { setting, setSetting } from '@/stores/setting';
 import styles from './style.module.css';
 import { createMemo, createSignal } from 'solid-js';
 
-import ToggleBtn from '@/components/ToggleBtn';
+import Icon from '@/components/Icon';
 import GenreSelector from './GenreSelector';
+import Settings from './Settings';
+import Profile from './Profile';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
     const toggleMenuStatus = () => setMenuStatus(!menuStatus());
+
+    const isLeftHanded = createMemo(() => setting.handed == "left");
     
-    const directionStyle = `direction: ${setting.handed == "left" ? "ltr" : "rtl"};`
-    const panelStyle = createMemo(() => (`left: ${menuStatus() ? '0' : (setting.handed == 'left' ? '-' : '') + '100vw'};`));
+    const directionStyle = createMemo(() => `direction: ${isLeftHanded() ? "ltr" : "rtl"};`)
+    const panelStyle = createMemo(() => (`left: ${menuStatus() ? '0' : (isLeftHanded() ? '-' : '') + '100vw'};`));
 
     return (
         <>
-            <div className={styles.container} style={directionStyle}>
+            <div className={styles.container} style={directionStyle()}>
                 {/* Button Wrapper */}
                 <div>
-                    <ToggleBtn
+                    <Icon
                         icon="menu"
                         onClick={toggleMenuStatus}
                     />
@@ -29,18 +33,22 @@ const Header = () => {
                 </div>
             </div>
 
+            {/* Toggle Panel */}
             <div 
                 className={styles.panel} 
-                style={
-                    panelStyle() +
-                    directionStyle
-                }
+                style={panelStyle() + directionStyle()}
             >
                 <div className={styles.content}>
-                    <GenreSelector />
+                    <div className={styles.settings}>
+                        <Profile />
+                        <Settings />
+                    </div>
+                    <div>
+                        <GenreSelector />
+                    </div>
                 </div>
                 <div onClick={toggleMenuStatus}>
-                    <ToggleBtn
+                    <Icon
                         icon="cross"
                         onClick={() => {}}
                     />
