@@ -8,17 +8,17 @@ const GenreSelector = () => {
 		{
 			title: "Male",
 			subGenres: [
-				{ id: 1, title: "HOME", bg: "" },
-				{ id: 2, title: "SALE: UP TO 80% OFF", bg: "" },
-				{ id: 3, title: "NEW IN", bg: "" }
+				{ id: 1, title: "HOME", bg: "", url: '/' },
+				{ id: 2, title: "SALE: UP TO 80% OFF", bg: "", url: '/sales/sales-slug' },
+				{ id: 3, title: "NEW IN", bg: "", url: '/sales/new-in' }
 			],
 		},
 		{
 			title: "Female",
 			subGenres: [
-				{ id: 4, title: "HOME", bg: "" },
-				{ id: 5, title: "SALE: UP TO 80% OFF", bg: "" },
-				{ id: 6, title: "NEW FEMALE CLOTHS", bg: "" }
+				{ id: 4, title: "HOME", bg: "", url: '/' },
+				{ id: 5, title: "SALE: UP TO 80% OFF", bg: "", url: '/sales/sales-slug' },
+				{ id: 6, title: "NEW FEMALE CLOTHS", bg: "", url: '/sales/new-female' }
 			],
 		}
 	];
@@ -37,7 +37,9 @@ const GenreSelector = () => {
 			<div className={styles.sub_selector}>
 				{/* Scrollables */}
 				{selectedSubGenres().map((subGenre) => (
-					<div>{subGenre.title}</div>
+					<div>
+						<a href={subGenre.url}>{subGenre.title}</a>
+					</div>
 				))}
 			</div>
 		</div>

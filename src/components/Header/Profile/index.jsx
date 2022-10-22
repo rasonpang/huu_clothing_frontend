@@ -1,8 +1,14 @@
+import { user, setUser } from '@/stores/user';
+import styles from './style.module.css';
+
 const Profile = () => {
     return (
         <div>
-            <span>User</span>
-            <span>Logout</span>
+            <div>{
+                user.isLoggedIn
+                ? `Hi ${user.name}!`
+                : 'Sign In'  
+            }</div>
         </div>
     )
 };

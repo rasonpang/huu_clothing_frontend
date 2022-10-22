@@ -1,0 +1,11 @@
+.settings {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.settings > div {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}

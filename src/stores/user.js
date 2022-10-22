@@ -1,18 +1,35 @@
 import { createStore } from 'solid-js/store';
 
-const [data, setData] = createStore({
+const defaultData = {
     id: null,
     name: 'Default',
     age: 0
-});
+};
+
+const [data, setData] = createStore(defaultData);
+
+const newData = {
+    ...data,
+    isLoggedIn: data.id !== null
+};
 
 const methods = {
+    login: () => {
+        setData({
+            id: 1,
+            name: 'Mofu',
+            age: 0
+        })
+    },
+    logout: () => {
+        setData(defaultData);
+    },
     name: (newName) => {
         setData({ name: data.name == 'Default' ? 'Not Default' : 'Default' });
     }
 };
 
 export {
-    data as user,
+    newData as user,
     methods as setUser
 }

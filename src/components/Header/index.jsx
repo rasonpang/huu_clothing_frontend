@@ -6,7 +6,6 @@ import { createMemo, createSignal } from 'solid-js';
 import Icon from '@/components/Icon';
 import GenreSelector from './GenreSelector';
 import Settings from './Settings';
-import Profile from './Profile';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
@@ -29,18 +28,19 @@ const Header = () => {
                 </div>
                 {/* Logo Wrapper */}
                 <div>
-                    <div>Asos</div>
+                    <a href="/">
+                        <div>Asos</div>
+                    </a>
                 </div>
             </div>
 
             {/* Toggle Panel */}
             <div 
-                className={styles.panel} 
+                className={`${styles.panel} ${menuStatus() ? styles.panel_active : ''}`}
                 style={panelStyle() + directionStyle()}
             >
                 <div className={styles.content}>
                     <div className={styles.settings}>
-                        <Profile />
                         <Settings />
                     </div>
                     <div>

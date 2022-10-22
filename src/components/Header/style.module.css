@@ -20,7 +20,11 @@
     background-color: rgba(0, 0, 0, .75);
     width: 100vw;
     height: 100vh;
-    transition: .25s;
+    transition: .3s;
+    opacity: 0;
+}
+.panel_active {
+    opacity: 1;
 }
 .panel > .content {
     width: calc(90% - 2.5em);

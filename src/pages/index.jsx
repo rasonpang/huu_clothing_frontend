@@ -1,7 +1,7 @@
 import Layout from '@/layouts/default';
 import { user, setUser } from '@/stores/user';
 
-const Page = () => {
+const HomePage = () => {
     const toggleName = () => {
         setUser.name('');
     };
@@ -14,4 +14,4 @@ const Page = () => {
     )
 }
 
-export default Page;
+export default HomePage;

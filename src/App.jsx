@@ -1,9 +1,11 @@
 import { Routes, Route } from "@solidjs/router";
 
-import IndexPage from '@/pages/index';
+import HomePage from './pages/index';
+import SalesPage from "./pages/sales";
 
 const routeList = [
-    { path: "/", component: IndexPage },
+    { path: "/", component: HomePage },
+    { path: "/sales/:id", component: SalesPage },
 ];
 
 const App = () => {
