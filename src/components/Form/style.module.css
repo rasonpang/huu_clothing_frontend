@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%;
+};
+
+.form_item {
+    background-color: red;
+};

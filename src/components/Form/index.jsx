@@ -1,14 +1,16 @@
 import styles from './style.module.css';
+import TextInput from './TextInput';
 
 const Form = (props) => {
     return (
-        <form onSubmit={props.onSubmit}>
+        <form className={styles.container} onSubmit={props.onSubmit}>
             {
                 props.formItems.map((item) => (
-                    <div className={styles.formItem}>
-                        {
-                            item?.element ?? <input type={item.type} />
-                        }
+                    <div className={styles.form_item}>
+                        {() => {
+                            if (['text', 'password'].includes(item.type)) return <TextInput type={item.type} />
+                            return item.element ?? <input type={item.type} />
+                        }}
                     </div>
                 ))
             }

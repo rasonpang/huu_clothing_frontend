@@ -1,5 +1,6 @@
 import Form from '@/components/Form';
 import { debounce, onFormSubmit } from '@/helper/helper';
+import { setUser } from '@/stores/user';
 import { createSignal } from 'solid-js';
 import styles from './style.module.css';
 
@@ -8,7 +9,7 @@ const Unauthorized = () => {
 
     const Login = () => {
         const loginSubmit = onFormSubmit(() => {
-            debounce(() => console.log('login'));
+            debounce(() => { setUser.login() }, 500);
         });
 
         const SubmitBtn = () => <button type='submit'>Login</button>

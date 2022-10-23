@@ -1,0 +1,19 @@
+.text_input_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: .25em;
+    border-radius: .25em;
+}
+
+.text_input {
+    color: gray;
+    border: none;
+    width: 90%;
+    transition: .5s;
+}
+.text_input:focus {
+    color: black;
+    outline: none;
+}

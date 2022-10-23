@@ -1,4 +1,5 @@
 import { user } from '@/stores/user';
+import Authorized from './mode/authorized';
 import Unauthorized from './mode/unauthorized';
 import styles from './style.module.css';
 

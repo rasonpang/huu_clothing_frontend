@@ -14,7 +14,7 @@ const Icon = (props) => {
 	})();
 
 	return (
-		<span className={styles.toggleMenu} onClick={props.onClick}>
+		<span className={styles.toggle_menu} onClick={props.onClick}>
 			<img src={imageSrc()} />
 		</span>
 	);
