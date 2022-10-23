@@ -1,32 +1,15 @@
-import { user, setUser } from '@/stores/user';
+import { user } from '@/stores/user';
+import Unauthorized from './mode/unauthorized';
 import styles from './style.module.css';
-
-const Login = () => {
-    return (
-        <div onClick={() => { setUser.login() }}>
-            Sign In
-        </div>
-    )
-};
-
-const Register = () => {
-    return (
-        <div>
-
-        </div>
-    )
-};
 
 const Profile = () => {
     return (
-        <div>
-            <div>
+        <div className={styles.container}>
             {
-                user.isLoggedIn
-                ? `Hi ${user.name}!`
-                : <Login />
+                user.isLoggedIn()
+                ? <Authorized />
+                : <Unauthorized />
             }
-            </div>
         </div>
     )
 };

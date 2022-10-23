@@ -1,21 +1,21 @@
+import { createMemo } from 'solid-js';
 import { createStore } from 'solid-js/store';
 
-const defaultData = {
+const defaultData = () => ({
     id: null,
     name: 'Default',
-    age: 0
-};
+    age: 0,
+});
 
-const [data, setData] = createStore(defaultData);
+const [data, setData] = createStore(defaultData());
 
 const newData = {
     ...data,
-    isLoggedIn: data.id !== null
+    isLoggedIn: createMemo(() => data.id !== null)
 };
 
 const methods = {
     login: () => {
-        console.log('login')
         setData({
             id: 1,
             name: 'Mofu',
@@ -23,7 +23,7 @@ const methods = {
         })
     },
     logout: () => {
-        setData(defaultData);
+        setData(defaultData());
     },
     name: (newName) => {
         setData({ name: data.name == 'Default' ? 'Not Default' : 'Default' });

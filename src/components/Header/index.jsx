@@ -5,7 +5,7 @@ import { createMemo, createSignal } from 'solid-js';
 
 import Icon from '@/components/Icon';
 import GenreSelector from '@/components/GenreSelector';
-import Settings from '@/components/Settings';
+import Profile from '../Profile';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
@@ -41,7 +41,7 @@ const Header = () => {
             >
                 <div className={styles.content}>
                     <div className={styles.settings}>
-                        <Settings />
+                        <Profile />
                     </div>
                     <div>
                         <GenreSelector />
