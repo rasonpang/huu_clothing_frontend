@@ -1,15 +1,17 @@
-import styles from './style.module.css';
+import { createSignal } from 'solid-js';
 
-import { createSignal, onMount } from 'solid-js';
+import styles from './style.module.css';
+import LoadingIcon from '@/assets/Loading.svg';
 
 const Icon = (props) => {
-	const [imageSrc, setImageSrc] = createSignal(null);
+	const [imageSrc, setImageSrc] = createSignal(LoadingIcon);
 
-	onMount(async () => {
+	(async () => {
 		// In order to follow vite template, must use '../~.svg' as format
-		const { default: newImageSrc } = await import(`../../assets/${props.icon}.svg`);
+		const fileType = props.type ?? 'svg';
+		const { default: newImageSrc } = await import(`../../assets/${props.icon}.${fileType}`);
 		setImageSrc(newImageSrc);
-	});
+	})();
 
 	return (
 		<span className={styles.toggleMenu} onClick={props.onClick}>
