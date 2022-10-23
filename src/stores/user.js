@@ -15,6 +15,7 @@ const newData = {
 
 const methods = {
     login: () => {
+        console.log('login')
         setData({
             id: 1,
             name: 'Mofu',

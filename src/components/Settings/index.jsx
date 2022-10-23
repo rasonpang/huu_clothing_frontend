@@ -3,7 +3,7 @@ import { setting, setSetting } from "@/stores/setting";
 import { user, setUser } from '@/stores/user';
 
 import ToggleBtn from "@/components/ToggleBtn";
-import Profile from "../Profile";
+import Profile from "@/components/Profile";
 
 import styles from './style.module.css';
 

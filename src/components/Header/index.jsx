@@ -4,8 +4,8 @@ import styles from './style.module.css';
 import { createMemo, createSignal } from 'solid-js';
 
 import Icon from '@/components/Icon';
-import GenreSelector from './GenreSelector';
-import Settings from './Settings';
+import GenreSelector from '@/components/GenreSelector';
+import Settings from '@/components/Settings';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
