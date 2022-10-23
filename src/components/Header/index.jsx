@@ -22,7 +22,7 @@ const Header = () => {
                 {/* Button Wrapper */}
                 <div>
                     <Icon
-                        icon="menu"
+                        icon="Menu"
                         onClick={toggleMenuStatus}
                     />
                 </div>
@@ -48,10 +48,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div onClick={toggleMenuStatus}>
-                    <Icon
-                        icon="cross"
-                        onClick={() => {}}
-                    />
+                    <Icon icon="Menu" />
                 </div>
             </div>
         </>
