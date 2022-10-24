@@ -1,5 +1,6 @@
 import { Routes, Route } from "@solidjs/router";
 
+import Layout from '@/layouts/default';
 import HomePage from './pages/index';
 import SalesPage from "./pages/sales";
 
@@ -16,16 +17,20 @@ const App = () => {
         })
     })
 
-    return <>
-        <Routes>
-            {routeData.map((route) => (
-                <Route
-                    path={route.path}
-                    component={route.component}
-                />
-            ))}
-        </Routes>
-    </>
+    return (
+        <>
+            <Layout>
+                <Routes>
+                    {routeData.map((route) => (
+                        <Route
+                            path={route.path}
+                            component={route.component}
+                        />
+                    ))}
+                </Routes>
+            </Layout>
+        </>
+    )
 }
 
 export default App;

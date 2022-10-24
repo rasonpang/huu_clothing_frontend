@@ -1,7 +1,7 @@
 import { createMemo, createSignal } from 'solid-js';
 import styles from './style.module.css';
 
-const GenreSelector = () => {
+const GenreSelector = (props) => {
 	const [selectedGenre, setSelectedGenre] = createSignal(0);
 
 	const genreList = [
