@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    width: 100%;
+    height: 450px;
+    background-color: rgba(0,0,0,0.5);
+    grid-template-rows: 8.5fr 1.5fr;
+}
+
+.images_wrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+.image_section {
+    min-width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    height: 100%;
+    width: auto;
+}
+
+.indicator_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: aquamarine;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.indicator_selected {
+    background-color: red;
+}

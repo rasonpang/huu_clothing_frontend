@@ -1,14 +1,9 @@
-import { user, setUser } from '@/stores/user';
+import Carousel from '@/components/Carousel';
 
 const HomePage = () => {
-    const toggleName = () => {
-        setUser.name('');
-    };
-
     return (
         <>
-            <div>{user.name}</div>
-            <button onClick={toggleName}>Toggle</button>
+            <Carousel />
         </>
     )
 }

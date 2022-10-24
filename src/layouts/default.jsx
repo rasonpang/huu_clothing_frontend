@@ -3,10 +3,10 @@ import Header from "@/components/Header"
 const Layout = (props) => {
     return (
         <div>
-            <div className="header">
+            <div>
                 <Header />
             </div>
-            <div className="contents">
+            <div style={{ padding: '1em' }}>
                 {props.children}
             </div>
         </div>
