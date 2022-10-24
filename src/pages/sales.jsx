@@ -8,7 +8,7 @@ const SalesPage = () => {
     return (
         <>
             {
-                ProductList[param()].map(product => (
+                (ProductList[param()] || []).map(product => (
                     <div>{product.name}</div>
                 ))
             }
