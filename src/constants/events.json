@@ -1,0 +1,16 @@
+{
+    "carousel": [
+        {
+            "imgSrc": "https://images.asos-media.com/products/reclaimed-vintage-inspired-front-logo-embroidery-cap-in-washed-grey/201505106-1-grey?$n_320w$&wid=317&fit=constrain",
+            "url": "/sales/new-in"
+        },
+        {
+            "imgSrc": "https://images.asos-media.com/products/reclaimed-vintage-inspired-relaxed-t-shirt-with-woodland-animals-graphic-in-washed-blue/201721003-1-washedblue?$n_320w$&wid=317&fit=constrain",
+            "url": "/sales/sales-slug"
+        },
+        {
+            "imgSrc": "https://images.asos-media.com/products/reclaimed-vintage-inspired-chain-necklace-in-silver/202617251-1-silver?$n_320w$&wid=317&fit=constrain",
+            "url": "/sales/new-female"
+        }
+    ]
+}

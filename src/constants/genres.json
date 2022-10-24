@@ -1,0 +1,20 @@
+{
+    "genres": [
+		{
+			"title": "Male",
+			"subGenres": [
+				{ "id": 1, "title": "HOME", "bg": "", "url": "/" },
+				{ "id": 2, "title": "SALE: UP TO 80% OFF", "bg": "", "url": "/sales/sales-slug" },
+				{ "id": 3, "title": "NEW IN", "bg": "", "url": "/sales/new-in" }
+			]
+		},
+		{
+			"title": "Female",
+			"subGenres": [
+				{ "id": 4, "title": "HOME", "bg": "", "url": "/" },
+				{ "id": 5, "title": "SALE: UP TO 80% OFF", "bg": "", "url": "/sales/sales-slug" },
+				{ "id": 6, "title": "NEW FEMALE CLOTHS", "bg": "", "url": "/sales/new-female" }
+			]
+		}
+	]
+}
