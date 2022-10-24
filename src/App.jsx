@@ -1,7 +1,7 @@
 import { Routes, Route } from "@solidjs/router";
 
-import Layout from '@/layouts/default';
-import HomePage from './pages/index';
+import Layout from "@/layouts/default";
+import HomePage from "./pages/index";
 import SalesPage from "./pages/sales";
 
 const routeList = [
@@ -10,27 +10,24 @@ const routeList = [
 ];
 
 const App = () => {
-    const routeData = routeList.map(function(route) {
-        return ({
+    const routeData = routeList.map(function (route) {
+        return {
             path: route.path,
-            component: route.component
-        })
-    })
+            component: route.component,
+        };
+    });
 
     return (
         <>
             <Layout>
                 <Routes>
                     {routeData.map((route) => (
-                        <Route
-                            path={route.path}
-                            component={route.component}
-                        />
+                        <Route path={route.path} component={route.component} />
                     ))}
                 </Routes>
             </Layout>
         </>
-    )
-}
+    );
+};
 
 export default App;
