@@ -13,7 +13,7 @@ export default defineConfig({
       includeAssets: ['app/*.svg'],
       manifest: {
         name: 'Huu Clothing',
-        short_name: 'huuclothing',
+        short_name: 'Huu Clothing',
         description: 'Huu Clothing Netlify Web App',
         theme_color: '#060505',
         icons: [
