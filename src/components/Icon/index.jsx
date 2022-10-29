@@ -1,17 +1,15 @@
 import { createSignal } from "solid-js";
-
 import styles from "./style.module.css";
-import LoadingIcon from "@/assets/Loading.svg";
 
 const Icon = (props) => {
-    const [imageSrc, setImageSrc] = createSignal(LoadingIcon);
+    const [imageSrc, setImageSrc] = createSignal("/Loading.svg");
 
     (async () => {
         // In order to follow vite template, must use '../~.svg' as format
         const fileType = props.type ?? "svg";
-        const { default: newImageSrc } = await import(
-            `../../assets/${props.icon}.${fileType}`
-        );
+        const parentPath = props.parentPath ?? "app";
+
+        const newImageSrc = `/${parentPath}/${props.icon}.${fileType}`;
         setImageSrc(newImageSrc);
     })();
 
