@@ -14,9 +14,13 @@ const GenreSelector = (props) => {
         <div className={styles.container}>
             <div className={styles.main_selector}>
                 {genreList.map((genre, genreIndex) => (
-                    <div onClick={() => setSelectedGenre(genreIndex)}>
-                        {genre.title +
-                            (selectedGenre() == genreIndex ? "*" : "")}
+                    <div
+                        className={
+                            selectedGenre() == genreIndex ? styles.selected : ""
+                        }
+                        onClick={() => setSelectedGenre(genreIndex)}
+                    >
+                        {genre.title}
                     </div>
                 ))}
             </div>

@@ -40,9 +40,14 @@ const Header = () => {
                     <Icon icon="Menu" onClick={toggleMenuStatus} />
                 </div>
                 {/* Logo Wrapper */}
-                <div>
+                <div className={styles.logo_wrapper}>
                     <a href="/">
-                        <div>Asos</div>
+                        <img
+                            src="/manifest/pwa-192.png"
+                            alt="Home Logo"
+                            height="100%"
+                            width="auto"
+                        />
                     </a>
                 </div>
             </div>
@@ -55,7 +60,7 @@ const Header = () => {
                 style={panelStyle() + directionStyle()}
             >
                 <div className={styles.content}>
-                    <div className={styles.settings}>
+                    <div className={styles.profile}>
                         <Profile />
                     </div>
                     <div>

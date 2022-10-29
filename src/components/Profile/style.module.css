@@ -1,5 +1,11 @@
 .container {
-    border-radius: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 5%;
-    background-color: gray;
+    min-height: 6em;
+    border-radius: 2.5vw;
+    
+    background-color: #343A40;
 }

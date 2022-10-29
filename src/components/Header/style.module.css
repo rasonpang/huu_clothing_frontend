@@ -1,17 +1,22 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr;
     justify-content: center;
     align-items: center;
     padding: .5em 0;
 
-    /* background-color: #2a2a2a; */
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--bg-secondary);
+    color: var(--color-primary);
 }
 .container > div {
+    height: 3em;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.logo_wrapper > a {
+    height: 3em;
 }
 
 .panel {
@@ -30,11 +35,11 @@
 .panel > .content {
     width: calc(90% - 2.5em);
     height: 100%;
-    background-color: rgb(26, 26, 26);
+    background-color: var(--bg-primary);
     color: white;
 }
 
-.settings {
+.profile {
     direction: ltr;
-    padding: 1em;
+    padding: .5em;
 }

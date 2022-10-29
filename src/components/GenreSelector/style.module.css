@@ -2,14 +2,22 @@
 	direction: ltr;
 }
 
+.selected {
+	border-bottom-color: var(--bg-secondary) !important;
+}
+
 .main_selector {
 	display: grid;
 	grid-auto-flow: column;
 	width: 100%;
-	background-color: red;
 }
-
 .main_selector > div {
+	border-bottom-width: .2em;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,0.2);
+
+	transition: border-color .4s;
+
 	text-align: center;
 	padding: .75em 0;
 }

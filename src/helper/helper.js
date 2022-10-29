@@ -14,3 +14,20 @@ export const onFormSubmit = (func) => (e) => {
     e.preventDefault();
     func();
 };
+
+export const setIntersectionObserver = (selectors, fn, options) => {
+    const targets = document.querySelectorAll(selectors);
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(fn);
+    }, {
+        ...{
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        },
+        ...options
+    })
+
+    targets.forEach((element) => observer.observe(element));
+};

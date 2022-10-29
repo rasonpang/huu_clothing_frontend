@@ -15,7 +15,7 @@ export default defineConfig({
         name: 'Huu Clothing',
         short_name: 'huuclothing',
         description: 'Huu Clothing Netlify Web App',
-        theme_color: '#000000',
+        theme_color: '#060505',
         icons: [
           {
             type: 'image/png',
