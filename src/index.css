@@ -1,8 +1,11 @@
 :root {
   --bg-primary: #161616;
   --bg-secondary: #C84B31;
+  --bg-tertiary: #30475E;
+  --bg-forth: #F5F5F5;
 
   --color-primary: #FFFFFF;
+  --color-secondary: #000000;
 }
 
 body {

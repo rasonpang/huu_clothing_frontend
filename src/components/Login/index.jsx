@@ -1,18 +1,20 @@
-import { setUser } from "@/stores/user";
 import { useNavigate } from "@solidjs/router";
+
+import Icon from "@/components/Icon";
+
 import styles from "./style.module.css";
 
 const Login = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const onContainerClick = () => {
-        // navigate("/login");
-        setUser.login();
+        navigate("/login");
     };
 
     return (
         <div className={styles.container} onClick={onContainerClick}>
-            Login
+            <Icon icon="User" alt="user" />
+            Sign In
         </div>
     );
 };
