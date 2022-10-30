@@ -10,7 +10,7 @@ const Image = (props) => {
         }
     });
 
-    return <img src={imgSrc()} />;
+    return <img src={imgSrc()} alt={props.alt ?? "Image"} />;
 };
 
 export default Image;

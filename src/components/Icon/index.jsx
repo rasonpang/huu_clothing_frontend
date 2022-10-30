@@ -15,7 +15,7 @@ const Icon = (props) => {
 
     return (
         <span className={styles.toggle_menu} onClick={props.onClick}>
-            <img src={imageSrc()} />
+            <img src={imageSrc()} alt={props.alt ?? "Icon"} />
         </span>
     );
 };
