@@ -39,6 +39,10 @@
     color: white;
 }
 
+.toggle_wrapper {
+    width: calc(10% + 2.5em);
+}
+
 .profile {
     direction: ltr;
     padding: .5em;

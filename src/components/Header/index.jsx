@@ -1,12 +1,15 @@
-// import { user, setUser } from '@/stores/user';
-import { setting, setSetting } from "@/stores/setting";
-import styles from "./style.module.css";
 import { createEffect, createMemo, createSignal } from "solid-js";
+import { useLocation } from "@solidjs/router";
+
+import { setting, setSetting } from "@/stores/setting";
+import { user } from "@/stores/user";
 
 import Icon from "@/components/Icon";
 import GenreSelector from "@/components/GenreSelector";
-import Profile from "../Profile";
-import { useLocation } from "@solidjs/router";
+import Login from "@/components/Login";
+import Profile from "@/components/Profile";
+
+import styles from "./style.module.css";
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
@@ -61,13 +64,16 @@ const Header = () => {
             >
                 <div className={styles.content}>
                     <div className={styles.profile}>
-                        <Profile />
+                        {user.isLoggedIn() ? <Profile /> : <Login />}
                     </div>
                     <div>
                         <GenreSelector />
                     </div>
                 </div>
-                <div onClick={toggleMenuStatus}>
+                <div
+                    className={styles.toggle_wrapper}
+                    onClick={toggleMenuStatus}
+                >
                     <Icon icon="Menu" />
                 </div>
             </div>
