@@ -1,16 +1,17 @@
 .container {
     background-color: white;
-    padding: .75em;
-    border-radius: .25em;
+
+	padding: .5em;
+	gap: .5em
 }
 
-.text_input {
-    color: gray;
-    border: none;
-    width: 90%;
-    transition: .5s;
+.input {
+	width: 100%;
+	border: 0;
+	padding: 0;
+
+	font-size: large;
 }
-.text_input:focus {
-    color: black;
-    outline: none;
+.input:focus {
+	outline: none;
 }

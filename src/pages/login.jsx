@@ -1,17 +1,19 @@
-import Form from "@/components/Form";
-import FormButton from "@/components/Form/Button";
 import TextInput from "@/components/Form/TextInput";
 
 const LoginPage = () => {
-    const formItems = [
-        { type: "text" },
-        { type: "password" },
-        { element: <FormButton>Log In</FormButton> },
-    ];
-
     return (
         <div>
-            <Form formItems={formItems}></Form>
+            <form>
+                <div>
+                    <TextInput type="text" placeholder="Username" />
+                </div>
+                <div>
+                    <TextInput type="password" placeholder="Password" />
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
         </div>
     );
 };
