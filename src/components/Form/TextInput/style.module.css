@@ -1,7 +1,4 @@
-.text_input_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
     background-color: white;
     padding: .75em;
     border-radius: .25em;

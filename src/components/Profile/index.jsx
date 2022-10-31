@@ -13,7 +13,7 @@ const Profile = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} full_center`}>
             <span>
                 <div onClick={toggleShowSettings}>{`Hi ${user.name}!`}</div>
                 <span

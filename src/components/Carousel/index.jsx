@@ -24,14 +24,17 @@ const Carousel = (props) => {
         <div className={styles.container}>
             <div className={styles.images_wrapper}>
                 {data.map(({ imgSrc, url }, index) => (
-                    <a className={styles.image_section} href={url}>
+                    <a
+                        className={`${styles.image_section} full_center`}
+                        href={url}
+                    >
                         <section className="carousel-sections" index={index}>
                             <Image className={styles.image} src={imgSrc} />
                         </section>
                     </a>
                 ))}
             </div>
-            <div className={styles.indicator_wrapper}>
+            <div className="full_center">
                 {[...Array(data.length).keys()].map((i) => (
                     <span
                         className={`

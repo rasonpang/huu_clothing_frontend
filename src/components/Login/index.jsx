@@ -12,9 +12,11 @@ const Login = () => {
     };
 
     return (
-        <div className={styles.container} onClick={onContainerClick}>
-            <Icon icon="User" alt="user" />
-            Sign In
+        <div className={`${styles.container}`} onClick={onContainerClick}>
+            <div className="full_center">
+                <Icon icon="User" alt="user" />
+            </div>
+            <div>Sign In</div>
         </div>
     );
 };

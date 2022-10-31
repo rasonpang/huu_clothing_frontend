@@ -1,8 +1,4 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     padding: 5%;
     min-height: 6em;
     border-radius: 2.5vw;

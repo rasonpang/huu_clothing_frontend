@@ -39,11 +39,11 @@ const Header = () => {
         <>
             <div className={styles.container} style={directionStyle()}>
                 {/* Button Wrapper */}
-                <div>
+                <div className="full_center">
                     <Icon icon="Menu" onClick={toggleMenuStatus} />
                 </div>
                 {/* Logo Wrapper */}
-                <div className={styles.logo_wrapper}>
+                <div className={`${styles.logo_wrapper} full_center`}>
                     <a href="/">
                         <img
                             src="/manifest/pwa-192.png"
