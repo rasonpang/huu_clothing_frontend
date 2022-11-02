@@ -37,19 +37,19 @@ const Header = () => {
 
     return (
         <>
-            <div className={styles.container} style={directionStyle()}>
+            <div class={styles.container} style={directionStyle()}>
                 {/* Button Wrapper */}
-                <div className="full_center">
+                <div class="full_center">
                     <Icon icon="Menu" onClick={toggleMenuStatus} />
                 </div>
                 {/* Logo Wrapper */}
-                <div className={`${styles.logo_wrapper} full_center`}>
+                <div class={`${styles.logo_wrapper} full_center`}>
                     <a href="/">
-                        <img
-                            src="/manifest/pwa-192.png"
+                        <Icon
+                            icon="pwa-192"
+                            source="manifest"
+                            type="png"
                             alt="Home Logo"
-                            height="100%"
-                            width="auto"
                         />
                     </a>
                 </div>
@@ -57,23 +57,20 @@ const Header = () => {
 
             {/* Toggle Panel */}
             <div
-                className={`${styles.panel} ${
+                class={`${styles.panel} ${
                     menuStatus() ? styles.panel_active : ""
                 }`}
                 style={panelStyle() + directionStyle()}
             >
-                <div className={styles.content}>
-                    <div className={styles.profile}>
+                <div class={styles.content}>
+                    <div class={styles.profile}>
                         {user.isLoggedIn() ? <Profile /> : <Login />}
                     </div>
                     <div>
                         <GenreSelector />
                     </div>
                 </div>
-                <div
-                    className={styles.toggle_wrapper}
-                    onClick={toggleMenuStatus}
-                >
+                <div class={styles.toggle_wrapper} onClick={toggleMenuStatus}>
                     <Icon icon="Menu" />
                 </div>
             </div>

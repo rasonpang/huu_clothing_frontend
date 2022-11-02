@@ -13,7 +13,7 @@
 }
 
 .logo_wrapper > a {
-    height: 3em;
+    display: flex;
 }
 
 .panel {

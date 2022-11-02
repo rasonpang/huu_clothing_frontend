@@ -1,18 +1,19 @@
 import Icon from "@/components/Icon";
 import styles from "./style.module.css";
 
-const TextInput = (props) => {
-    // props: { type: "text" || "password" }
+interface TextInputProps {
+    type: "text" | "password";
+    placeholder?: string;
+}
 
-    const inputType = ["text", "password"].includes(props.type)
-        ? props.type
-        : "text";
+const TextInput = (props: TextInputProps) => {
+    const inputType = props.type ?? "text";
 
     return (
-        <div className={`${styles.container} full_center`}>
+        <div class={`${styles.container} full_center`}>
             <Icon icon="User" />
             <input
-                className={styles.input}
+                class={styles.input}
                 type={inputType}
                 placeholder={props.placeholder ?? ""}
             />

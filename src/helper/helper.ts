@@ -1,6 +1,8 @@
-let debounceList = {};
+import { DebounceList, IntersectionObserverEntryCallback } from "@/interfaces/helpers";
 
-export const debounce = (func, timeout = 1000) => {
+let debounceList: DebounceList = {};
+
+export const debounce = (func: Function, timeout: number = 1000) => {
     if (typeof func != 'function') return
     
     if (debounceList[func.name]) clearTimeout(debounceList[func.name]);
@@ -10,16 +12,16 @@ export const debounce = (func, timeout = 1000) => {
     }, timeout);
 };
 
-export const onFormSubmit = (func) => (e) => {
+export const onFormSubmit = (func: Function) => (e: any) => {
     e.preventDefault();
     func();
 };
 
-export const setIntersectionObserver = (selectors, fn, options) => {
+export const setIntersectionObserver = (selectors: string, func: IntersectionObserverEntryCallback, options?: IntersectionObserverInit) => {
     const targets = document.querySelectorAll(selectors);
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(fn);
+        entries.forEach(func);
     }, {
         ...{
             root: null,

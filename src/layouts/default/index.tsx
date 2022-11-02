@@ -1,13 +1,13 @@
 import styles from "./style.module.css";
 import Header from "@/components/Header";
 
-const Layout = (props) => {
+const Layout = (props: any) => {
     return (
         <div>
-            <div className={styles.header}>
+            <div class={styles.header}>
                 <Header />
             </div>
-            <div className={styles.content}>{props.children}</div>
+            <div class={styles.content}>{props.children}</div>
         </div>
     );
 };
