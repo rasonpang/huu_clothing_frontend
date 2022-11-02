@@ -2,8 +2,9 @@ import { createMemo, createSignal, from } from "solid-js";
 import styles from "./style.module.css";
 
 import { genres as genreList } from "@/constants/genres.json";
+import { GenreData, SubGenre } from "@/interfaces/constants";
 
-const GenreSelector = (props) => {
+const GenreSelector = () => {
     const [selectedGenre, setSelectedGenre] = createSignal(0);
 
     const selectedSubGenres = createMemo(
@@ -11,22 +12,22 @@ const GenreSelector = (props) => {
     );
 
     return (
-        <div className={styles.container}>
-            <div className={styles.main_selector}>
-                {genreList.map((genre, genreIndex) => (
+        <div class={styles.container}>
+            <div class={styles.main_selector}>
+                {genreList.map((genre: GenreData, index: number) => (
                     <div
-                        className={
-                            selectedGenre() == genreIndex ? styles.selected : ""
+                        class={
+                            selectedGenre() == index ? styles.selected : ""
                         }
-                        onClick={() => setSelectedGenre(genreIndex)}
+                        onClick={() => setSelectedGenre(index)}
                     >
                         {genre.title}
                     </div>
                 ))}
             </div>
-            <div className={styles.sub_selector}>
+            <div class={styles.sub_selector}>
                 {/* Scrollables */}
-                {selectedSubGenres().map((subGenre) => (
+                {selectedSubGenres().map((subGenre: SubGenre) => (
                     <a href={subGenre.url}>{subGenre.title}</a>
                 ))}
             </div>

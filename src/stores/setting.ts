@@ -1,7 +1,8 @@
+import { Setting } from '@/interfaces/stores';
 import { createStore } from 'solid-js/store';
 
 // Data
-const [data, setData] = createStore({
+const [data, setData] = createStore<Setting>({
     handed: 'right',
 });
 

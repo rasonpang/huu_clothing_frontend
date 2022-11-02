@@ -13,11 +13,11 @@ const Profile = () => {
     };
 
     return (
-        <div className={`${styles.container} full_center`}>
+        <div class={`${styles.container} full_center`}>
             <span>
                 <div onClick={toggleShowSettings}>{`Hi ${user.name}!`}</div>
                 <span
-                    className={styles.settings}
+                    class={styles.settings}
                     style={showSettings() ? "height: 100%;" : ""}
                 >
                     {/* Hand Position */}

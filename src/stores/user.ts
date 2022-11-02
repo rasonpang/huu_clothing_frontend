@@ -1,3 +1,4 @@
+import { User } from '@/interfaces/stores';
 import { createMemo } from 'solid-js';
 import { createStore } from 'solid-js/store';
 
@@ -7,7 +8,7 @@ const defaultData = () => ({
     age: 0,
 });
 
-const [data, setData] = createStore(defaultData());
+const [data, setData] = createStore<User>(defaultData());
 
 const newData = {
     ...data,
@@ -25,8 +26,8 @@ const methods = {
     logout: () => {
         setData(defaultData());
     },
-    name: (newName) => {
-        setData({ name: data.name == 'Default' ? 'Not Default' : 'Default' });
+    name: (newName: string) => {
+        setData({ name: newName });
     }
 };
 

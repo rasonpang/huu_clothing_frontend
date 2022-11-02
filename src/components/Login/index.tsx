@@ -12,8 +12,8 @@ const Login = () => {
     };
 
     return (
-        <div className={`${styles.container}`} onClick={onContainerClick}>
-            <div className="full_center">
+        <div class={`${styles.container}`} onClick={onContainerClick}>
+            <div class="full_center">
                 <Icon icon="User" alt="user" />
             </div>
             <div>Sign In</div>
