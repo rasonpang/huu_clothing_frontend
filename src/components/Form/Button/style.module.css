@@ -1,0 +1,9 @@
+.container {
+	background-color: var(--bg-secondary);
+	border: none;
+	color: var(--color-primary);
+	width: 100%;
+	padding: 1em 0;
+	border-radius: .5em;
+	font-size: medium;
+}

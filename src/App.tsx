@@ -2,7 +2,7 @@ import { Routes, Route } from "@solidjs/router";
 
 import Layout from "@/layouts/default";
 
-import HomePage from "./pages/index";
+import HomePage from "./pages/home";
 import SalesPage from "./pages/sales";
 import LoginPage from "./pages/login";
 

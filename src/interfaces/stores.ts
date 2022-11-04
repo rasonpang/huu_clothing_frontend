@@ -3,6 +3,10 @@ export type User = {
 	name: string,
 	age: number
 }
+export interface UserCredential {
+	username: string;
+	password: string;
+}
 
 export type Setting = {
 	handed: string

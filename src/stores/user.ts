@@ -1,4 +1,4 @@
-import { User } from '@/interfaces/stores';
+import { User, UserCredential } from '@/interfaces/stores';
 import { createMemo } from 'solid-js';
 import { createStore } from 'solid-js/store';
 
@@ -16,12 +16,19 @@ const newData = {
 };
 
 const methods = {
-    login: () => {
-        setData({
-            id: 1,
-            name: 'Mofu',
-            age: 0
-        })
+    login: async (credential: UserCredential) => {
+        return new Promise((resolve: any, reject: any) => {
+            if (credential.username == 'test' && credential.password == 'test') {
+                setData({
+                    id: 1,
+                    name: 'Mofu',
+                    age: 0
+                })
+                resolve(true);
+            } else {
+                reject(`Invalid username or password.`)
+            }
+        });
     },
     logout: () => {
         setData(defaultData());

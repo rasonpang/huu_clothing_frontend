@@ -22,10 +22,8 @@
 .input:focus {
 	outline: none;
 }
-.input:focus ~ .placeholder {
-	transform: translateY(-1.7em);
-}
-.input:valid ~ .placeholder {
+.input:focus ~ .placeholder { color: var(--bg-forth); }
+.input:focus ~ .placeholder, input:valid ~ .placeholder {
 	transform: translateY(-1.7em);
 }
 
