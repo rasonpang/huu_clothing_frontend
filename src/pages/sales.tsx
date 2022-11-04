@@ -1,17 +1,23 @@
-import { createSignal, For, onMount } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { getParam } from "@/helper/getter";
-import ProductListData from "@/constants/products.json";
 import { getStorage, setStorage } from "@/helper/storage";
+
+import { ProductData, ProductList } from "@/interfaces/constants";
+
+import ProductListData from "@/constants/products.json";
 
 // Currency mainly based on Malaysia Ringgit, another module will be created
 const SalesPage = () => {
     const param = getParam("id");
 
-    const [productList, setProductList] = createSignal([]);
+    const [productList, setProductList] = createSignal<ProductList[]>([]);
 
-    onMount(() => {
-        setProductList(ProductListData[param()] ?? []);
-    });
+    createEffect(() => {
+        const apiData: ProductData = ProductListData;
+        const targetKey = param();
+        const newProductList: ProductList[] = apiData[targetKey];
+        setProductList(newProductList);
+    })
 
     const updateProductList = () => {
         let newProductList = productList();
@@ -19,18 +25,18 @@ const SalesPage = () => {
         setProductList([...newProductList]);
     };
 
-    const addToCart = (id) => {
+    const addToCart = (id: number) => {
         const key = "cart";
 
-        const cartList = getStorage(key, { parse: true }) ?? [];
+        const cartList: number[] = getStorage(key, { parse: true }) ?? [];
         cartList.push(id);
-
         setStorage(key, cartList);
+        
     };
 
     return (
         <>
-            {productList().map((product) => (
+            {(productList() ?? []).map((product: ProductList) => (
                 <div>
                     <div>{product.name}</div>
                     <div>

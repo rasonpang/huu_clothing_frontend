@@ -14,3 +14,13 @@ export interface SubGenre {
 	bg: string;
 	url: string;
 }
+
+export interface ProductList {
+	id: number;
+	name: string;
+	price: number;
+}
+
+export interface ProductData {
+	[key: string]: ProductList[]
+}

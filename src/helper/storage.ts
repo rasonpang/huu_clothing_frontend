@@ -1,6 +1,6 @@
 import { GetStorageOptions } from "@/interfaces/helpers";
 
-export const getStorage = (key: string, options: GetStorageOptions) => {
+export const getStorage = (key: string, options: GetStorageOptions): any => {
 	let item = localStorage.getItem(key) ?? '';
 	if (options.parse) item = JSON.parse(item);
 	return item;

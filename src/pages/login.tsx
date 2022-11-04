@@ -5,10 +5,18 @@ const LoginPage = () => {
         <div>
             <form>
                 <div>
-                    <TextInput type="text" placeholder="Username" />
+                    <TextInput 
+                        id="username"
+                        type="text"
+                        placeholder="Username"
+                    />
                 </div>
                 <div>
-                    <TextInput type="password" placeholder="Password" />
+                    <TextInput
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                    />
                 </div>
                 <div>
                     <button>Submit</button>
