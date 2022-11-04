@@ -10,7 +10,7 @@ const SalesPage = () => {
     const [productList, setProductList] = createSignal([]);
 
     onMount(() => {
-        setProductList(ProductListData[param()]);
+        setProductList(ProductListData[param()] ?? []);
     });
 
     const updateProductList = () => {
