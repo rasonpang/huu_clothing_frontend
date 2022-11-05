@@ -64,7 +64,7 @@ const Header = () => {
             >
                 <div class={styles.content}>
                     <div class={styles.profile}>
-                        {user.isLoggedIn() ? <Profile /> : <Login />}
+                        {user.isAuthenticated() ? <Profile /> : <Login />}
                     </div>
                     <div>
                         <GenreSelector />

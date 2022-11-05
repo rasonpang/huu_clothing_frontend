@@ -1,11 +1,12 @@
 export type User = {
-	id: null | number,
-	name: string,
-	age: number
+	authenticated: boolean;
+	name: string
 }
 export interface UserCredential {
-	username: string;
-	password: string;
+	username?: string;
+	password?: string;
+
+	refresh?: string;
 }
 
 export type Setting = {
