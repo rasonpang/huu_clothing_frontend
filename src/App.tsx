@@ -9,6 +9,7 @@ import LoginPage from "./pages/login";
 const routeList = [
     { path: "/", component: HomePage },
     { path: "/sales/:id", component: SalesPage },
+    { path: "/product/:id", component: SalesPage },
     { path: "/login", component: LoginPage },
 ];
 

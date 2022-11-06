@@ -19,11 +19,11 @@ const SalesPage = () => {
         setProductList(newProductList);
     })
 
-    const updateProductList = () => {
-        let newProductList = productList();
-        newProductList.push({ id: 1, name: "New - In", price: 23 });
-        setProductList([...newProductList]);
-    };
+    // const updateProductList = () => {
+    //     let newProductList = productList();
+    //     newProductList.push({ id: 1, name: "New - In", price: 23 });
+    //     setProductList([...newProductList]);
+    // };
 
     const addToCart = (id: number) => {
         const key = "cart";
@@ -31,7 +31,6 @@ const SalesPage = () => {
         const cartList: number[] = getStorage(key, { parse: true }) ?? [];
         cartList.push(id);
         setStorage(key, cartList);
-        
     };
 
     return (
