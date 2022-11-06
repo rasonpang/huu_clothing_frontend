@@ -31,7 +31,6 @@
 	position: absolute;
 	transition: .12s;
 
-	transform: translateY(-0.2em);
 	padding: 0 .5em;
 	color: gray;
 	font-size: large;
