@@ -20,12 +20,12 @@ const methods = {
             
             if ((username == 'test' && password == 'test') || (refresh == 'd21JK@#jkH#@DAS38asv')) {
                 const { token, profile } = apiData;
-                setData({ ...profile, authenticated: true });
+                setData({ name: profile.name, authenticated: true });
                 setStorage('token', token);
 
                 resolve(true);
             } else {
-                reject(`Invalid username or password.`)
+                reject(`Invalid username or password.`);
             }
         });
     },
@@ -44,10 +44,7 @@ onMount(() => {
     if (token?.refresh) methods.login({ refresh: token?.refresh });
 });
 
-const newData = {
-    ...data,
-    isAuthenticated: createMemo(() => data.authenticated)
-};
+const newData = createMemo(() => data);
 
 export {
     newData as user,

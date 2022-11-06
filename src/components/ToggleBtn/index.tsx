@@ -2,7 +2,7 @@ import { createMemo, createSignal } from "solid-js";
 import styles from "./style.module.css";
 
 interface ToggleBtnProps {
-    value: string;
+    value: string | boolean;
     onClick: Function;
 }
 

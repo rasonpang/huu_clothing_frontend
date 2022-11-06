@@ -15,7 +15,7 @@ const Profile = () => {
     return (
         <div class={`${styles.container} full_center`}>
             <span>
-                <div onClick={toggleShowSettings}>{`Hi ${user.name}!`}</div>
+                <div onClick={toggleShowSettings}>{`Hi ${user().name}!`}</div>
                 <span
                     class={styles.settings}
                     style={showSettings() ? "height: 100%;" : ""}
@@ -25,7 +25,7 @@ const Profile = () => {
                         <span>Hand Position</span>
                         <span>
                             <ToggleBtn
-                                value={setting.handed == "right"}
+                                value={setting().handed != "left"}
                                 onClick={() => setSetting.setHanded()}
                             />
                         </span>

@@ -1,4 +1,5 @@
 import { Setting } from '@/interfaces/stores';
+import { createMemo } from 'solid-js';
 import { createStore } from 'solid-js/store';
 
 // Data
@@ -14,7 +15,9 @@ const methods = {
     }
 };
 
+const newData = createMemo(() => data);
+
 export {
-    data as setting,
+    newData as setting,
     methods as setSetting
 }

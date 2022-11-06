@@ -15,7 +15,7 @@ const Header = () => {
     const [menuStatus, setMenuStatus] = createSignal(false);
     const toggleMenuStatus = () => setMenuStatus(!menuStatus());
 
-    const isLeftHanded = createMemo(() => setting.handed == "left");
+    const isLeftHanded = createMemo(() => setting().handed == "left");
 
     const directionStyle = createMemo(
         () => `direction: ${isLeftHanded() ? "ltr" : "rtl"};`
@@ -64,7 +64,7 @@ const Header = () => {
             >
                 <div class={styles.content}>
                     <div class={styles.profile}>
-                        {user.isAuthenticated() ? <Profile /> : <Login />}
+                        {user().authenticated ? <Profile /> : <Login />}
                     </div>
                     <div>
                         <GenreSelector />
