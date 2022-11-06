@@ -5,5 +5,6 @@ export interface IntersectionObserverEntryCallback {
 }
 
 export interface GetStorageOptions {
-	parse: boolean;
+	parse?: boolean;
+	defaultValue?: any;
 }

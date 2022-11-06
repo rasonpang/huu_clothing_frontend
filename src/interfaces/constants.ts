@@ -15,12 +15,12 @@ export interface SubGenre {
 	url: string;
 }
 
-export interface ProductList {
+export interface Product {
 	id: number;
 	name: string;
 	price: number;
 }
 
 export interface ProductData {
-	[key: string]: ProductList[]
+	[key: string]: Product[]
 }
