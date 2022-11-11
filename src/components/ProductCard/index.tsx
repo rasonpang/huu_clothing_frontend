@@ -1,5 +1,5 @@
-import { getStorage, setStorage } from '@/helper/storage';
 import { Product } from '@/interfaces/constants';
+import { useNavigate } from '@solidjs/router';
 import Image from '../Image';
 import styles from './style.module.css';
 
@@ -9,31 +9,21 @@ interface ProductCardProps {
 
 const ProductCard = (props: ProductCardProps) => {
 	const product = props.data;
+	const navigate = useNavigate();
 
-	const addToCart = (id: number) => {
-        const key = "cart";
-
-        const cartList: number[] = getStorage(key, { parse: true, defaultValue: [] });
-        cartList.push(id);
-        setStorage(key, cartList);
-    };
+	const redirect = () => { navigate('/product/' + product.id) };
+	const likeProduct = () => { console.log('Liked: ' + product.id); }
 
 	return (
 		<div class={styles.container}>
-			<div>
+			<div class={styles.image_wrapper} onClick={redirect}>
 				<Image src='' height='100%' width='100%' />
 			</div>
-			<div class={styles.content}>
+			<div class={styles.name_wrapper} onClick={likeProduct}>
 				<div>{product.name}</div>
-				<div>
-					<button
-						onClick={() => {
-							addToCart(product.id);
-						}}
-					>
-						Add to cart
-					</button>
-				</div>
+			</div>
+			<div class={styles.price_wrapper} onClick={redirect}>
+				<div>RM {product.price}</div>
 			</div>
 		</div>
 	)

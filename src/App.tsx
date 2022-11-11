@@ -5,11 +5,12 @@ import Layout from "@/layouts/default";
 import HomePage from "./pages/home";
 import SalesPage from "./pages/sales";
 import LoginPage from "./pages/login";
+import ProductPage from "./pages/product";
 
 const routeList = [
     { path: "/", component: HomePage },
     { path: "/sales/:id", component: SalesPage },
-    { path: "/product/:id", component: SalesPage },
+    { path: "/product/:id", component: ProductPage },
     { path: "/login", component: LoginPage },
 ];
 

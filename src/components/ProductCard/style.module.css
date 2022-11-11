@@ -1,7 +1,20 @@
 .container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 7fr 1.75fr .5fr;
+	gap: .5em;
+
+	width: 100%;
+	height: 350px;
+}
+
+.image_wrapper {
+	background-color: rgba(255, 255, 255 ,0.1);
+}
+.name_wrapper {
+	overflow: hidden;
+	text-overflow: ellipsis;
 	width: 100%;
 	height: 100%;
-	
-	background-color: rgba(255, 255, 255 ,0.2);
-	border-radius: .5em;
 }
+.price_wrapper { margin-top: auto; }

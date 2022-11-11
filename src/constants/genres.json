@@ -3,9 +3,9 @@
 		{
 			"title": "Genre",
 			"subGenres": [
-				{ "id": 1, "title": "Hoodie", "bg": "", "url": "/product/hoodie" },
-				{ "id": 2, "title": "Pants", "bg": "", "url": "/product/pants" },
-				{ "id": 3, "title": "Jacket", "bg": "", "url": "/product/jacket" }
+				{ "id": 1, "title": "Hoodie", "bg": "", "url": "/sales/hoodie" },
+				{ "id": 2, "title": "Pants", "bg": "", "url": "/sales/pants" },
+				{ "id": 3, "title": "Jacket", "bg": "", "url": "/sales/jacket" }
 			]
 		}
 	],
