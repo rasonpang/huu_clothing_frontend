@@ -21,10 +21,12 @@
     border-radius: 50%;
 
     margin: auto;
+    box-shadow: 0 0 0.5em 0.5em rgb(0 0 0 / 20%);
 }
 
 .settings_container {
     width: 100%;
+    background-color: var(--bg-tertiary);
 }
 .settings_container > div {
     display: flex;

@@ -6,6 +6,7 @@ import ToggleBtn from "@/components/ToggleBtn";
 
 import styles from "./style.module.css";
 import Image from "../Image";
+import Icon from "../Icon";
 
 const Profile = () => {
     const [showSettings, setShowSettings] = createSignal(false);
@@ -19,22 +20,12 @@ const Profile = () => {
                 <Image src="" width="100%" />
             </div>
 
-            <div>
-                {user().name}
-            </div>
+            <div>{user().name}</div>
 
-            {
-                showSettings()
-                ? <ProfileSettings />
-                : <></>
-            }
+            {showSettings() ? <ProfileSettings /> : <></>}
 
             <div onClick={toggleShowSettings}>
-                {
-                    showSettings()
-                    ? "Collapse"
-                    : "Expand"
-                }
+                {showSettings() ? "Collapse" : "Expand"}
             </div>
         </div>
     );
@@ -54,7 +45,7 @@ const ProfileSettings = () => {
                 </span>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Profile;
