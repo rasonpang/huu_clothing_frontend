@@ -1,18 +1,32 @@
 .container {
+    display: grid;
+
+    gap: 1.5em;
     padding: 5%;
+    padding-bottom: 2.5%;
     min-height: 6em;
     
     background-color: #343A40;
 }
-
-.settings {
-    display: block;
-    height: 0;
-    overflow: hidden;
+.container > div {
+    margin: auto;
 }
 
-.settings > div {
-    display: inline-flex;
+.icon_wrapper {
+    width: 50%;
+    height: auto;
+
+    background-color: rgba(255,255,255,0.05);
+    border: .15em solid var(--bg-primary);
+    border-radius: 50%;
+
+    margin: auto;
+}
+
+.settings_container {
     width: 100%;
+}
+.settings_container > div {
+    display: flex;
     justify-content: space-between;
 }

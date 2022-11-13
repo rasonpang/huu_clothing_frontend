@@ -24,8 +24,8 @@ const Image = (props: ImageProps) => {
             class={props.class ?? ''}
             src={imgSrc()} alt={props.alt ?? "Image"}
             style={{
-                width: props.width ?? "317px",
-                height: props.height ?? "405px"
+                width: props.width ?? "auto",
+                height: props.height ?? "auto"
             }}
         />
     );
