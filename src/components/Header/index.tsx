@@ -37,7 +37,15 @@ const Header = () => {
 
     return (
         <>
-            <div class={styles.container} style={directionStyle()}>
+            <div
+                class={styles.container}
+                style={{
+                    direction: isLeftHanded() ? "ltr" : "rtl",
+                    background: `linear-gradient(${
+                        isLeftHanded() ? "" : "-"
+                    }45deg, rgba(131,58,180,1) 0%, var(--bg-secondary) 50%, rgba(252,176,69,1) 100%)`,
+                }}
+            >
                 {/* Button Wrapper */}
                 <div class="full_center">
                     <Icon icon="Menu" onClick={toggleMenuStatus} />

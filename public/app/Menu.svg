@@ -1,2 +1,10 @@
-<svg id="env7tXfdPD21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-<rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300641 231.164122)" stroke-width="0"/><rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300641 128.774222)" stroke-width="0"/><rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300647 338.38375)" stroke-width="0"/></svg>
+<svg id="env7tXfdPD21"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+	stroke="white"
+	fill="white"
+>
+	<rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300641 231.164122)" stroke-width="0"/>
+	<rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300641 128.774222)" stroke-width="0"/>
+	<rect width="357.398718" height="37.671757" rx="0" ry="0" transform="translate(71.300647 338.38375)" stroke-width="0"/>
+</svg>

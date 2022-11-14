@@ -6,7 +6,7 @@ interface IconProps {
     icon: string;
     alt?: string;
     source?: string;
-    
+
     onClick?: any; // Function | null
 
     width?: string;
@@ -22,7 +22,7 @@ const Icon = (props: IconProps) => {
     (async () => {
         // In order to follow vite template, must use '../~.svg' as format
         const fileType = props.type ?? "svg";
-        const fileSource = props.source ?? 'app';
+        const fileSource = props.source ?? "app";
 
         const newImageSrc = `/${fileSource}/${props.icon}.${fileType}`;
         setImageSrc(newImageSrc);

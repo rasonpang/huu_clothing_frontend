@@ -24,8 +24,13 @@ const Profile = () => {
 
             {showSettings() ? <ProfileSettings /> : <></>}
 
-            <div onClick={toggleShowSettings}>
-                {showSettings() ? "Collapse" : "Expand"}
+            <div
+                class={styles.toggle_wrapper}
+                data-toggle={showSettings() ? "true" : "false"}
+                onClick={toggleShowSettings}
+            >
+                <Icon icon="Chevron" />
+                {/* {showSettings() ? "Collapse" : "Expand"} */}
             </div>
         </div>
     );
