@@ -21,11 +21,12 @@ const Image = (props: ImageProps) => {
 
     return (
         <img
-            class={props.class ?? ''}
-            src={imgSrc()} alt={props.alt ?? "Image"}
+            class={props.class ?? ""}
+            src={imgSrc()}
+            alt={props.alt ?? "Image"}
             style={{
                 width: props.width ?? "auto",
-                height: props.height ?? "auto"
+                height: props.height ?? "auto",
             }}
         />
     );

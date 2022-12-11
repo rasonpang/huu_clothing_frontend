@@ -1,35 +1,22 @@
 import { createEffect, createMemo, createSignal } from "solid-js";
 import { useLocation } from "@solidjs/router";
 
-import { setting, setSetting } from "@/stores/setting";
-import { user } from "@/stores/user";
+import { setting } from "@/stores/setting";
 
 import Icon from "@/components/Icon";
-import GenreSelector from "@/components/GenreSelector";
-import Login from "@/components/Login";
-import Profile from "@/components/Profile";
 
 import styles from "./style.module.css";
+import Sidebar from "../Sidebar";
 
 const Header = () => {
-    const [menuStatus, setMenuStatus] = createSignal(false);
-    const toggleMenuStatus = () => setMenuStatus(!menuStatus());
+    const [sidebar, setSidebar] = createSignal(false);
+    const toggleSidebar = () => setSidebar(!sidebar());
 
     const isLeftHanded = createMemo(() => setting().handed == "left");
 
-    const directionStyle = createMemo(
-        () => `direction: ${isLeftHanded() ? "ltr" : "rtl"};`
-    );
-    const panelStyle = createMemo(
-        () =>
-            `left: ${
-                menuStatus() ? "0" : (isLeftHanded() ? "-" : "") + "100vw"
-            };`
-    );
-
     const pathname = createMemo(() => useLocation().pathname);
     createEffect(() => {
-        setMenuStatus(false);
+        setSidebar(false);
 
         // Watch this value for changes
         pathname();
@@ -48,7 +35,7 @@ const Header = () => {
             >
                 {/* Button Wrapper */}
                 <div class="full_center">
-                    <Icon icon="Menu" onClick={toggleMenuStatus} />
+                    <Icon icon="Menu" onClick={toggleSidebar} />
                 </div>
                 {/* Logo Wrapper */}
                 <div class={`${styles.logo_wrapper} full_center`}>
@@ -63,25 +50,12 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Toggle Panel */}
-            <div
-                class={`${styles.panel} ${
-                    menuStatus() ? styles.panel_active : ""
-                }`}
-                style={panelStyle() + directionStyle()}
-            >
-                <div class={styles.content}>
-                    <div class={styles.profile}>
-                        {user().authenticated ? <Profile /> : <Login />}
-                    </div>
-                    <div>
-                        <GenreSelector />
-                    </div>
-                </div>
-                <div class={styles.toggle_wrapper} onClick={toggleMenuStatus}>
-                    <Icon icon="Menu" />
-                </div>
-            </div>
+            {/* Sidebar */}
+            <Sidebar
+                value={sidebar}
+                isLeftHanded={isLeftHanded}
+                toggleSidebar={toggleSidebar}
+            />
         </>
     );
 };

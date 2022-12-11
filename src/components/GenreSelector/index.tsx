@@ -16,9 +16,7 @@ const GenreSelector = () => {
             <div class={styles.main_selector}>
                 {genreList.map((genre: GenreData, index: number) => (
                     <div
-                        class={
-                            selectedGenre() == index ? styles.selected : ""
-                        }
+                        class={selectedGenre() == index ? styles.selected : ""}
                         onClick={() => setSelectedGenre(index)}
                     >
                         {genre.title}

@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+
+	gap: 1em;
+	border: 1px solid white;
+	border-radius: .2em;
+	padding: 1em;
+}
+
+.size {
+	padding: .5em 1em;
+	border: 1px solid white;
+	border-radius: .2em;
+}
+.size_selected {
+	background-color: red;
+}

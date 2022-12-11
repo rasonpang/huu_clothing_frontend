@@ -29,6 +29,11 @@ a {
   text-decoration: none;
 }
 
+hr {
+	border: 1px solid var(--bg-secondary);
+  background-color: var(--bg-secondary);
+}
+
 .full_center {
   display: flex;
   justify-content: center;

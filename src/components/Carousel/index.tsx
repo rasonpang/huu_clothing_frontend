@@ -18,7 +18,8 @@ const Carousel = (props: CarouselProps) => {
     onMount(() => {
         const isIntersecting = (entry: IntersectionObserverEntry) => {
             const newIndex = entry.target.getAttribute("index");
-            if (entry.isIntersecting && ![null, ""].includes(newIndex)) setSelectedKey(Number(newIndex));
+            if (entry.isIntersecting && ![null, ""].includes(newIndex))
+                setSelectedKey(Number(newIndex));
         };
 
         setIntersectionObserver(".carousel-sections", isIntersecting);
@@ -28,10 +29,7 @@ const Carousel = (props: CarouselProps) => {
         <div class={styles.container}>
             <div class={styles.images_wrapper}>
                 {data.map(({ imgSrc, url }: EventData, index: number) => (
-                    <a
-                        class={`${styles.image_section} full_center`}
-                        href={url}
-                    >
+                    <a class={`${styles.image_section} full_center`} href={url}>
                         <section class="carousel-sections" index={index}>
                             <Image class={styles.image} src={imgSrc} />
                         </section>

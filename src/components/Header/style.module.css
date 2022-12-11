@@ -14,33 +14,3 @@
 .logo_wrapper > a {
     display: flex;
 }
-
-.panel {
-    display: flex;
-    position: fixed;
-    top: 0;
-    background-color: rgba(0, 0, 0, .75);
-    width: 100vw;
-    height: 100vh;
-    transition: .3s;
-    opacity: 0;
-}
-.panel_active {
-    opacity: 1;
-}
-.panel > .content {
-    width: calc(90% - 2.5em);
-    height: 100%;
-    background-color: var(--bg-primary);
-    color: white;
-
-    overflow: auto;
-}
-
-.toggle_wrapper {
-    width: calc(10% + 2.5em);
-}
-
-.profile {
-    direction: ltr;
-}

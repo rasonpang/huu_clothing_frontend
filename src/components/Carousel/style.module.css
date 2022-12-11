@@ -33,10 +33,13 @@
     width: 10px;
     height: 10px;
     background-color: rgba(255,255,255,0.2);
-    margin: 0 5px;
+    margin: 0 2.5px;
     border-radius: 50%;
+    transition: width .5s;
 }
 
 .indicator_selected {
     background-color: var(--bg-secondary);
+    width: 25px;
+    border-radius: .5em;
 }
