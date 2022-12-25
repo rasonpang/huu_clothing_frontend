@@ -1,0 +1,42 @@
+.container {
+	--max-lines: 3;
+	--line-height: 1.4;
+
+	max-height: calc(var(--max-lines) * 1em * var(--line-height));
+	line-height: var(--line-height);
+	background-color: white;
+
+	overflow: hidden;
+	position: relative;
+}
+
+.container:has(+ .expand_btn:not(:checked))::before {
+	content: "";
+	position: absolute;
+	height: calc(1em * var(--line-height));
+	width: 100%;
+	bottom: 0;
+	pointer-events: none;
+	background: linear-gradient(to bottom, transparent, var(--bg-primary));
+}
+
+.expand_btn {
+	appearance: none;
+	border: 1px solid white;
+	padding: .5em;
+	border-radius: .25em;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.expand_btn::before {
+	content: "Expand";
+}
+
+.expand_btn:checked::before {
+	content: "Collapse";
+}
+
+.container:has(+ .expand_btn:checked) {
+	max-height: none;
+}

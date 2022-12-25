@@ -4,6 +4,8 @@ import { getParam } from "@/helper/getter";
 import Carousel from "@/components/Carousel";
 import { createSignal, onMount } from "solid-js";
 import SizeSelector from "@/components/SizeSelector";
+import OrderBar from "@/components/OrderBar";
+import Description from "@/components/Description";
 
 export interface ProductSize {
     name: string;
@@ -22,7 +24,8 @@ const ProductPage = () => {
             { name: "XL", price: 6.5 },
             { name: "XXL", price: 7 },
         ],
-        description: "Product Description",
+        description:
+            "Product Description Web Dev Simplified 3 line tutorial ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhhashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhhashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh ashjdkdhajksdhasdjkashdhh",
     });
     const [selectedSize, setSelectedSize] = createSignal(0);
 
@@ -39,10 +42,7 @@ const ProductPage = () => {
                 <span class={styles.favorite_btn}>Favorite</span>
             </div>
 
-            <div>
-                {product().description}
-                (Web Dev Simplified 3 line tutorial)
-            </div>
+            <Description>{product().description}</Description>
 
             <hr />
 
@@ -57,11 +57,6 @@ const ProductPage = () => {
                     }}
                     value={selectedSize}
                 />
-            </div>
-
-            <div class={styles.order_bar}>
-                <span class={styles.add_cart_btn}>Add to cart</span>
-                <span>Quantity: 1</span>
             </div>
         </div>
     );
