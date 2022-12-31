@@ -15,7 +15,8 @@ const Image = (props: ImageProps) => {
     onMount(async () => {
         if (props?.src) {
             const { ok, url } = await fetch(props.src);
-            setImgSrc(ok ? url : "error.png");
+            console.log(`ok: ${ok}, url: ${url}`);
+            setImgSrc(ok ? url : "/app/Missing.svg");
         }
     });
 

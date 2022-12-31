@@ -4,7 +4,6 @@
 
 	max-height: calc(var(--max-lines) * 1em * var(--line-height));
 	line-height: var(--line-height);
-	background-color: white;
 
 	overflow: hidden;
 	position: relative;
@@ -27,6 +26,7 @@
 	border-radius: .25em;
 	cursor: pointer;
 	margin-top: 1rem;
+	color: var(--color-primary);
 }
 
 .expand_btn::before {
