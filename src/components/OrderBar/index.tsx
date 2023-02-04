@@ -1,10 +1,16 @@
+import FormButton from "../Form/Button";
 import styles from "./style.module.css";
 
 const OrderBar = () => {
     return (
         <div class={styles.order_bar}>
-            <span class={styles.add_cart_btn}>Add to cart</span>
-            <span>Quantity: 1</span>
+            <FormButton
+                onClick={() => {
+                    console.log("test");
+                }}
+            >
+                Add to cart
+            </FormButton>
         </div>
     );
 };

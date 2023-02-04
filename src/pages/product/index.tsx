@@ -4,7 +4,6 @@ import { getParam } from "@/helper/getter";
 import Carousel from "@/components/Carousel";
 import { createSignal, onMount } from "solid-js";
 import SizeSelector from "@/components/SizeSelector";
-import OrderBar from "@/components/OrderBar";
 import Description from "@/components/Description";
 
 export interface ProductSize {
@@ -35,7 +34,7 @@ const ProductPage = () => {
 
     return (
         <div>
-            <Carousel data={carousel} />
+            <Carousel data={carousel} redirect={false} />
 
             <div class={styles.title_container}>
                 <h4>{product().name}</h4>
@@ -46,7 +45,7 @@ const ProductPage = () => {
 
             <hr />
 
-            <div>RM {product().sizes[selectedSize()].price}</div>
+            {/* <div>RM {product().sizes[selectedSize()].price}</div> */}
 
             <div>
                 <h3>Size</h3>

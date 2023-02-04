@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import Header from "@/components/Header";
 import OrderBar from "@/components/OrderBar";
-import { useLocation, useParams } from "@solidjs/router";
+import { useLocation } from "@solidjs/router";
 import { createEffect, createMemo, createSignal } from "solid-js";
 
 const Layout = (props: any) => {

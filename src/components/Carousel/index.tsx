@@ -7,6 +7,7 @@ import { EventData } from "@/interfaces/constants";
 
 interface CarouselProps {
     data: any;
+    redirect: boolean;
 }
 
 const Carousel = (props: CarouselProps) => {
@@ -29,7 +30,10 @@ const Carousel = (props: CarouselProps) => {
         <div class={styles.container}>
             <div class={styles.images_wrapper}>
                 {data.map(({ imgSrc, url }: EventData, index: number) => (
-                    <a class={`${styles.image_section} full_center`} href={url}>
+                    <a
+                        class={`${styles.image_section} full_center`}
+                        href={props.redirect == false ? "#" : url}
+                    >
                         <section class="carousel-sections" index={index}>
                             <Image class={styles.image} src={imgSrc} />
                         </section>
