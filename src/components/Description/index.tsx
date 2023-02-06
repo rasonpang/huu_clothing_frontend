@@ -6,9 +6,11 @@ interface DescriptionProps {
 
 const Description = (props: DescriptionProps) => {
     return (
-        <div>
-            <div class={styles.container}>{props.children}</div>
-            <input class={styles.expand_btn} type="checkbox" />
+        <div class={styles.container}>
+            <div class={styles.description}>{props.children}</div>
+            <div class={styles.expand_btn}>
+                <input type="checkbox" />
+            </div>
         </div>
     );
 };

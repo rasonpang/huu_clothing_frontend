@@ -6,6 +6,8 @@
 
   --color-primary: #FFFFFF;
   --color-secondary: #000000;
+
+  --header-height: 3em;
 }
 
 body {

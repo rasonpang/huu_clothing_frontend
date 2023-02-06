@@ -5,6 +5,7 @@ import { ProductData, Product } from "@/interfaces/constants";
 
 import ProductListData from "@/constants/products.json";
 import ProductList from "@/components/ProductList";
+import SalesFilter from "@/components/SalesFilter";
 
 // Currency mainly based on Malaysia Ringgit, another module will be created
 const SalesPage = () => {
@@ -17,16 +18,11 @@ const SalesPage = () => {
         const targetKey = param();
         const newProductList: Product[] = apiData[targetKey];
         setProductList(newProductList);
-    })
-
-    // const updateProductList = () => {
-    //     let newProductList = productList();
-    //     newProductList.push({ id: 1, name: "New - In", price: 23 });
-    //     setProductList([...newProductList]);
-    // };
+    });
 
     return (
         <>
+            <SalesFilter />
             <ProductList data={productList()} />
         </>
     );

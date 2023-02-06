@@ -58,6 +58,12 @@ const Sidebar = (props: SidebarProps) => {
 
                 <hr style="margin-top: 0;" />
 
+                {/* Others */}
+                <div>Cart</div>
+                <div>Settings</div>
+
+                <hr />
+
                 {/* Log out Button */}
                 {user().authenticated ? <LogOutBtn /> : <></>}
             </div>
