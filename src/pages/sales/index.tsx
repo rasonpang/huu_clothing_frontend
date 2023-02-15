@@ -5,7 +5,9 @@ import { ProductData, Product } from "@/interfaces/constants";
 
 import ProductListData from "@/constants/products.json";
 import ProductList from "@/components/ProductList";
+import ProductFilter from "@/components/ProductFilter";
 import SalesFilter from "@/components/SalesFilter";
+import styles from './style.module.css';
 
 // Currency mainly based on Malaysia Ringgit, another module will be created
 const SalesPage = () => {
@@ -21,10 +23,10 @@ const SalesPage = () => {
     });
 
     return (
-        <>
-            <SalesFilter />
+        <div class={styles.container}>
+            <ProductFilter />
             <ProductList data={productList()} />
-        </>
+        </div>
     );
 };
 
